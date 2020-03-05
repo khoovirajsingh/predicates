@@ -40,8 +40,9 @@
   (let [awards (book :awards)]
     (contains? awards award)))
 
-(defn HAS-ALL-THE-AWARDS? [book awards]
-  :-)
+(defn HAS-ALL-THE-AWARDS? 
+  [book awards]
+  (every? #(has-award? book %) awards))
 
 (defn my-some [pred a-seq]
   :-)
