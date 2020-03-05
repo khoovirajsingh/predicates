@@ -28,8 +28,12 @@
 (defn whitespace? [character]
   (Character/isWhitespace character))
 
-(defn blank? [string]
-  :-)
+(defn blank? 
+  [string]
+  (or  
+      (every? whitespace? string)        
+      (empty? string)        
+      (nil? string)))
 
 (defn has-award? [book award]
   :-)
